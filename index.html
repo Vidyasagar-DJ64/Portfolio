@@ -169,6 +169,7 @@
 
     .socials a {
       color: var(--text-muted);
+      transition: color 0.3s ease;
     }
 
     .socials a:hover {
@@ -290,28 +291,87 @@
       font-size: 0.85rem;
     }
 
-    /* Responsive */
+    /* Responsive / Mobile View Tweaks */
     @media (max-width: 768px) {
-      .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding-top: 6rem;
+      header {
+        padding: 0.25rem 0;
       }
 
-      .hero-text p {
-        margin: 0 auto 1.5rem auto;
-      }
-
-      .hero-buttons {
+      nav {
+        padding: 0.8rem 1.25rem;
         justify-content: center;
       }
 
-      .socials {
-        justify-content: center;
+      .logo {
+        font-size: 1.1rem;
       }
 
       .nav-links {
         display: none;
+      }
+
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 6rem 1.25rem 3rem 1.25rem;
+        min-height: auto;
+        gap: 2rem;
+      }
+
+      .hero-text h1 {
+        font-size: 2.25rem;
+        line-height: 1.2;
+      }
+
+      .hero-text h2 {
+        font-size: 1.1rem;
+      }
+
+      .hero-text p {
+        font-size: 0.95rem;
+        margin: 0 auto 1.5rem auto;
+      }
+
+      .hero-image img {
+        width: 220px;
+        height: 270px;
+        border-radius: 14px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto 1.5rem auto;
+      }
+
+      .btn {
+        justify-content: center;
+        width: 100%;
+        padding: 0.85rem 1rem;
+      }
+
+      .socials {
+        justify-content: center;
+        gap: 1.5rem;
+        font-size: 1.35rem;
+      }
+
+      section {
+        padding: 3rem 1.25rem;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+
+      .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+
+      .card {
+        padding: 1.25rem;
       }
     }
   </style>
@@ -335,20 +395,19 @@
   <!-- Hero Section -->
   <section class="hero" id="about">
     <div class="hero-text">
-
       <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; color: #4ade80; font-weight: 600; margin-bottom: 1rem;">
-      <span style="width: 8px; height: 8px; background-color: #22c55e; border-radius: 50%; display: inline-block;"></span>
-      Open for Work / Opportunities
-    </div>
+        <span style="width: 8px; height: 8px; background-color: #22c55e; border-radius: 50%; display: inline-block;"></span>
+        Open for Work / Opportunities
+      </div>
 
       <h2>Hello, I'm</h2>
       <h1>VIDYASAGAR D J</h1>
-      <h2>Project Leader | Backend Developer | Cloud & Linux Enthusiast | Agentic AI Engineer </h2>
+      <h2>Project Leader | Backend Developer | Cloud & Linux Enthusiast | Agentic AI Engineer</h2>
       <p>
         Detail-oriented 7th-semester Computer Science & Engineering student at Mysuru Royal Institute of Technology (8.6 CGPA). Experienced in AI-integrated Django backends, RDBMS implementations, and managing cloud/Linux environments. Ex-intern at Utthunga.
       </p>
       <div class="hero-buttons">
-        <a href="mailto:djvidyasagar64@gmail.com" class="btn btn-primary"><i class="fa-solid font-envelope"></i> Contact Me</a>
+        <a href="mailto:djvidyasagar64@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Contact Me</a>
         <a href="#projects" class="btn btn-outline"><i class="fa-solid fa-code"></i> View Projects</a>
       </div>
       <div class="socials">
@@ -477,9 +536,9 @@
         <span class="subtitle">Utthunga Technologies | 1-Month Internship</span>
         <ul>
           <li>Engineered autonomous agent workflows using <strong>LangChain</strong> and stateful multi-agent orchestrations with <strong>LangGraph</strong>.</li>
-          <li>Built self-correcting and decision-making backend pipelines to automate complex system tasks and real-time execution[cite: 1].</li>
-          <li>Optimized AI-driven backend workflows and deployed Agentic models for automated execution[cite: 1].</li>
-          <li>Implemented Retrieval Augmented Generation(RAG) using LangChain Framework for the project that I was assigned on.</li>
+          <li>Built self-correcting and decision-making backend pipelines to automate complex system tasks and real-time execution.</li>
+          <li>Optimized AI-driven backend workflows and deployed Agentic models for automated execution.</li>
+          <li>Implemented Retrieval Augmented Generation (RAG) using the LangChain Framework for the assigned project.</li>
         </ul>
         <div class="tags">
           <span class="tag">LangGraph</span>
@@ -487,7 +546,7 @@
           <span class="tag">Agentic AI</span>
           <span class="tag">Python</span>
           <span class="tag">Autonomous Agents</span>
-          <span class="tag">Retrieval-Augmented-Generation (RAG)</span>
+          <span class="tag">RAG</span>
         </div>
       </div>
       <div class="card">
@@ -518,7 +577,7 @@
             </a>
             <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">IBM SkillsBuild</p>
           </li>
-          <li>
+          <li style="margin-bottom: 0.8rem;">
             <a href="devops.pdf" target="_blank" rel="noopener noreferrer">
             <strong>DevOps Bootcamp:</strong> 30-Hours Completion
             <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">Blessed IT Solution & MRIT</p>
@@ -569,7 +628,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2026 Vidyasagar D J. Built with HTML, CSS, and JavaScript.</p>
+    <p>© 2026 Vidyasagar D J. Built with HTML, CSS, and Font Awesome.</p>
   </footer>
 
 </body>
